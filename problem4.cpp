@@ -21,8 +21,7 @@ bool isPalindrome(int number)
 		++i;
 		--j;	
 	}
-	if (isPalindrome)
-		std::cout << number << std::endl;
+
 	return isPalindrome;
 }
 
