@@ -10,13 +10,13 @@ int main()
     int numberOfConsDigits = 5;
     int numberOfConsDigitsDecr = numberOfConsDigits - 1;
     int numberDigits = number.size();
-    int blockedDigits = 0;
+    
+    // Split with delimeter '0'
     for (int i = 0; i < numberDigits; ++i)
     {
 	if (number[i] == '0')
 	{
-	    blockedDigits = numberOfConsDigits + 1;
-	    if (numbersWithoutZeros.back().size() < 5)
+	    if (numbersWithoutZeros.back().size() < numberOfConsDigits)
 		numbersWithoutZeros.pop_back();
 	    numbersWithoutZeros.push_back("");
 	    continue;
@@ -27,7 +27,7 @@ int main()
 
     }
 
-    if (numbersWithoutZeros.back().size() < 5)
+    if (numbersWithoutZeros.back().size() < numberOfConsDigits)
 	numbersWithoutZeros.pop_back();
 
     int largestProduct = 0;
