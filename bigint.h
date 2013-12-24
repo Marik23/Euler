@@ -16,6 +16,7 @@ public:
     BigInt& operator*=(int rhs);
 
     int getDigitSum();
+    int getNumDigits();
 
     std::vector<char> m_number;
 };

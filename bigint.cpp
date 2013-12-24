@@ -113,3 +113,8 @@ int BigInt::getDigitSum()
 	sum += *it;
     return sum;
 }
+
+int BigInt::getNumDigits()
+{
+    return m_number.size();
+}
